@@ -83,6 +83,10 @@ https://www.youtube.com/watch?v=JSgeAFTwg0U`);
   if(msgs.length >= 4 && msgs[0] == 'ארז' && msgs[1] == 'תקלל' && msgs[2] == 'את' ) {
     testChannel.send(`${msgs[3]} יא ${curse()}`);
   }
+  
+  if(msg.toString().startsWith('ארז תגיד ')) {
+    testChannel.send(msg.toString().substr('ארז תגיד '.length));
+  }
 
   if(msg.toString() == 'ארז אתה אוהב אותי?')
     msg.reply(`לא כי אתה ${curse()}`);
