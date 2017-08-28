@@ -25,8 +25,12 @@ client.on('message', msg => {
   	}*/
   
   setInterval(function() {
-    let gchannel = msg.server.channels.get("id", 347742914127986699);
-    gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
+    try {
+      let gchannel = msg.server.channels.get("id", 347742914127986699);
+      gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
+    } catch(e) {
+      console.log('got pm');
+    }
   }, 100);
   
   
