@@ -6,6 +6,7 @@ client.on('ready', () => {
 });
 
 let msgCount = 0;
+let test = false;
 
 
 client.on('message', msg => {
@@ -23,15 +24,20 @@ client.on('message', msg => {
   		msg.reply('צא מהשרת ילד זין');
   		return false;
   	}*/
+   
+  if(!test) {
+    setInterval(function() {
+      try {
+        let gchannel = msg.channel;
+        if(gchannel.name == 'general')
+          gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
+      } catch(e) {
+        console.log('got pm');
+      }
+    }, 100);
+    test = true;
+  }
   
-  setInterval(function() {
-    try {
-      let gchannel = msg.server.channels.get("id", 347742914127986699);
-      gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
-    } catch(e) {
-      console.log('got pm');
-    }
-  }, 100);
   
   
   if(msg.toString().includes('תודה מוריד'))
