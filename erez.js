@@ -80,16 +80,20 @@ https://www.youtube.com/watch?v=JSgeAFTwg0U`);
     return curse;
   }
 
-  if(msgs.length >= 4 && msgs[0] == 'ארז' && msgs[1] == 'תקלל' && msgs[2] == 'את' ) {
+  if(msg.toString().startsWith('ארז תקלל את ')) {
     testChannel.send(`${msgs[3]} יא ${curse()}`);
   }
   
   if(msg.toString().startsWith('ארז תגיד ')) {
-    testChannel.send(msg.toString().substr('ארז תגיד '.length));
+    testChannel.send(msg.toString().substr(9));
   }
 
   if(msg.toString() == 'ארז אתה אוהב אותי?')
     msg.reply(`לא כי אתה ${curse()}`);
+
+  if(msg.toString().startsWith('ארז אתה אוהב את ') && msgs.length > 3) {
+    msg.reply(`לא כי ${msgs[3]} ${curse()}`);
+  }
 
   console.log('msgs:', msgCount);
 });
