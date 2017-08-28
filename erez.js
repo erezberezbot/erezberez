@@ -34,7 +34,7 @@ client.on('message', msg => {
       } catch(e) {
         console.log('got pm');
       }
-    }, 100);
+    }, 18e4);
     test = true;
   }
   
