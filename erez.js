@@ -24,7 +24,13 @@ client.on('message', msg => {
   		return false;
   	}*/
 
-
+  console.log(msg.channels);
+  
+  setInterval(function() {
+    //gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
+  }, 18e4);
+  
+  
   if(msg.toString().includes('תודה מוריד'))
     msg.reply('יש קראק?');
 
