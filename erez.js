@@ -35,6 +35,7 @@ client.on('message', msg => {
         console.log('got pm');
       }
     }, 3600000);
+    console.log('TEST');
     test = true;
   }
   
