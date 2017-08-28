@@ -23,12 +23,11 @@ client.on('message', msg => {
   		msg.reply('צא מהשרת ילד זין');
   		return false;
   	}*/
-
-  console.log(msg.channels);
   
   setInterval(function() {
-    //gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
-  }, 18e4);
+    let gchannel = msg.server.channels.get("id", 347742914127986699);
+    gchannel.send('אני הוא ארז, נוצרתי ע"י <@329255866882850816>');
+  }, 100);
   
   
   if(msg.toString().includes('תודה מוריד'))
