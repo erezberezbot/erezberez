@@ -91,7 +91,8 @@ https://www.youtube.com/watch?v=JSgeAFTwg0U`);
   if(msg.toString() == 'ארז אתה אוהב אותי?')
     msg.reply(`לא כי אתה ${curse()}`);
 
-  if(msg.toString().startsWith('ארז אתה אוהב את ') && msgs.length > 3) {
+  if(msg.toString().startsWith('ארז אתה אוהב את ')) {
+    console.log(msgs[3]);
     msg.reply(`לא כי ${msgs[3]} ${curse()}`);
   }
 
