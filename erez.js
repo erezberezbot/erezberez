@@ -19,10 +19,10 @@ client.on('message', msg => {
 
   let testChannel = msg.channel;
 
-  	if(user == 'Electro Power') {
+  	/*if(user == 'Electro Power') {
   		msg.reply('צא מהשרת ילד זין');
   		return false;
-  	}
+  	}*/
 
 
   if(msg.toString().includes('תודה מוריד'))
