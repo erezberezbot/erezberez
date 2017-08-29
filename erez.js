@@ -25,6 +25,8 @@ client.on('message', msg => {
         return false;
       }*/
 
+    console.log(msg.author.hasRole(msg.server.roles.get("name", "erezmaster")));
+
     if(msg.server && msg.toString() == 'ארז סתום תפה' && msg.author.hasRole(msg.server.roles.get("name", "erezmaster"))) {
       on = false;
       testChannel.send('טוב נו, בי לבנתיים');
