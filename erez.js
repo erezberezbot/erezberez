@@ -11,7 +11,7 @@ let on = true;
 
 
 client.on('message', msg => {
-  if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse0' || user == 'Pecan')) {
+  if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
     msg.reply('זמן להספים!');
   }
@@ -30,7 +30,7 @@ client.on('message', msg => {
       }*/
 
 
-    if(msg.toString() == 'ארז סתום תפה' && (user == 'DaCurse0' || user == 'Pecan')) {
+    if(msg.toString() == 'ארז סתום תפה' && (user == 'DaCurse' || user == 'Pecan')) {
       on = false;
       testChannel.send('טוב נו, בי לבנתיים');
     }
