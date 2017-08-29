@@ -11,6 +11,10 @@ let on = true;
 
 
 client.on('message', msg => {
+  if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse0' || user == 'Pecan')) {
+    on = true;
+    msg.reply('זמן להספים!');
+  }
   if(on) {
     let user = msg.author.username;
     if(user == 'Erez Berez')
@@ -25,10 +29,8 @@ client.on('message', msg => {
         return false;
       }*/
 
-    if(msg.server)
-      console.log(msg.author.hasRole(msg.server.roles.get("name", "erezmaster")));
 
-    if(msg.server && msg.toString() == 'ארז סתום תפה' && msg.author.hasRole(msg.server.roles.get("name", "erezmaster"))) {
+    if(msg.toString() == 'ארז סתום תפה' && (user == 'DaCurse0' || user == 'Pecan')) {
       on = false;
       testChannel.send('טוב נו, בי לבנתיים');
     }
