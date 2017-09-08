@@ -8,13 +8,18 @@ client.on('ready', () => {
 let msgCount = 0;
 let test = false;
 let on = true;
+let uptime = 0;
 
+setInterval(() => {uptime++;}, 1e3);
 
 client.on('message', msg => {
   if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
-    msg.reply('זמן להספים!');
-  }
+     msg.reply('זמן להספים!');
+ }
+  let testChannel = msg.channel;
+  if(msg.toString() == 'uptime')
+    testChannel.send(`${uptime}s`);
   if(on) {
     let user = msg.author.username;
     if(user == 'Erez Berez')
@@ -22,8 +27,8 @@ client.on('message', msg => {
     /*if(msg.author.username == 'Pecan')
       msg.reply('תחזרי למטבח');*/
 
-    let testChannel = msg.channel;
-
+    
+    
       /*if(user == 'Electro Power') {
         msg.reply('צא מהשרת ילד זין');
         return false;
@@ -122,3 +127,4 @@ client.on('message', msg => {
 });
 
 client.login('MzQ5Njc0MzY1NzYxMDkzNjM0.DH47MA.MuODI2P8lJ2-JdXsbn3eJ0yk7w0');
+   
