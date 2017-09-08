@@ -18,6 +18,8 @@ client.on('message', msg => {
      msg.reply('זמן להספים!');
  }
   let testChannel = msg.channel;
+  setInterval(() => {testChannel.send('תעה הוסף לול' + Math.random())},
+                                      1e3);
   if(msg.toString() == 'uptime')
     testChannel.send(`${uptime}s`);
   if(on) {
