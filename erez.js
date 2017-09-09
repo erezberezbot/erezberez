@@ -10,7 +10,7 @@ let test = false;
 let on = true;
 let uptime = 0;
 
-setInterval(() => {uptime++;}, 1e3);
+setInterval(() => {uptime++;}, 2e3);
 
 client.on('message', msg => {
   if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
