@@ -15,13 +15,15 @@ setInterval(() => {uptime++;}, 2e3);
 client.on('message', msg => {
   if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
-     msg.reply('זמן להספים!');
+    msg.reply('זמן להספים!');
  }
   let testChannel = msg.channel;
   /*setInterval(() => {testChannel.send('תעה הוסף לול' + Math.random())},
                                       1e3);*/
   if(msg.toString() == 'uptime')
     testChannel.send(`${uptime}s`);
+  if(msg.toString() == 'countmsgs')
+    testChannel.send(`Messages from last reset: ${msgCount}`);
   if(on) {
     let user = msg.author.username;
     if(user == 'Erez Berez')
@@ -62,7 +64,7 @@ client.on('message', msg => {
       msg.reply('יש קראק?');
 
     msgCount++;
-    if(msgCount % 30 == 0)
+    if(msgCount % 90 == 0)
       msg.reply(user == 'Pecan' ? ' תחזרי למטבח' :
       'עכשיו מור תתן ירידה מעפנה ותנעל את האשכול');
 
@@ -78,7 +80,7 @@ client.on('message', msg => {
       });
     }
 
-    let random = Math.floor(Math.random() * 40);
+    let random = Math.floor(Math.random() * 100);
     console.log('random:', random);
     if(random == 3) {
       msg.reply(user == 'Pecan' ? 'קחי את הקרשים שלך את לא עושה איתנו לג בעומר':
