@@ -16,6 +16,7 @@ client.on('message', msg => {
   if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
     msg.reply('זמן להספים!');
+    return;
  }
   let testChannel = msg.channel;
   /*setInterval(() => {testChannel.send('תעה הוסף לול' + Math.random())},
