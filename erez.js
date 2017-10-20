@@ -13,6 +13,7 @@ let uptime = 0;
 setInterval(() => {uptime++;}, 2e3);
 
 client.on('message', msg => {
+  let user = msg.author.username;
   if(msg.toString() == 'ארז תתעורר' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
     msg.reply('זמן להספים!');
@@ -26,7 +27,6 @@ client.on('message', msg => {
   if(msg.toString() == 'countmsgs')
     testChannel.send(`Messages from last reset: ${msgCount}`);
   if(on) {
-    let user = msg.author.username;
     if(user == 'Erez Berez')
       return false;
     /*if(msg.author.username == 'Pecan')
