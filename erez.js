@@ -13,7 +13,7 @@ let uptime = 0;
 setInterval(() => {uptime++;}, 2e3);
 
 client.on('message', msg => {
-  if(msg.toString() == 'טוב ארז תחזור' && (user == 'DaCurse' || user == 'Pecan')) {
+  if(msg.toString() == 'ארז תתעורר' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
     msg.reply('זמן להספים!');
     return;
