@@ -13,11 +13,12 @@ let uptime = 0;
 setInterval(() => {uptime++;}, 2e3);
 
 client.on('message', msg => {
+  if(msg.author.bot) return false;
   let user = msg.author.username;
   if(msg.toString() == 'ארז תתעורר' && (user == 'DaCurse' || user == 'Pecan')) {
     on = true;
     msg.reply('זמן להספים!');
-    return;
+    return false;
  }
   let testChannel = msg.channel;
   /*setInterval(() => {testChannel.send('תעה הוסף לול' + Math.random())},
