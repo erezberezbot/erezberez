@@ -41,7 +41,7 @@ client.on('message', msg => {
       }*/
 
 
-    if(msg.toString() == 'ארז סתום תפה' && (user == 'DaCurse' || user == 'Pecan')) {
+    if(msg.toString() == 'ארז סתום תפה' && (user == 'DaCurse' || user == 'Pecan' || msg.author.id == 347742171140456449)) {
       on = false;
       testChannel.send('טוב נו, בי לבנתיים');
     }
