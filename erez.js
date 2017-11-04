@@ -15,7 +15,7 @@ setInterval(() => {uptime++;}, 2e3);
 client.on('message', msg => {
   if(msg.author.bot) return false;
   let user = msg.author.username;
-  if(msg.toString() == 'ארז תתעורר' && (user == 'DaCurse' || user == 'Pecan')) {
+  if(msg.toString() == 'ארז תתעורר' && (user == 'DaCurse' || user == 'Pecan' || user == 'TheKing🍬')) {
     on = true;
     msg.reply('זמן להספים!');
     return false;
